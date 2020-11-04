@@ -1,0 +1,17 @@
+body.drag-tips #app::before {
+	align-items: center;
+	background: #eee;
+	border-radius: 30px;
+	bottom: 45vh;
+	content: 'Release the mouse to optimize';
+	display: flex;
+	font-size: 2vw;
+	justify-content: center;
+	left: 30vw;
+	pointer-events: none;
+	position: fixed;
+	right: 30vw;
+	text-align: center;
+	top: 45vh;
+	z-index: 9;
+}
