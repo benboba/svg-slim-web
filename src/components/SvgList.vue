@@ -302,13 +302,22 @@ export default Vue.extend({
 }
 
 .item .action {
+	line-height: 40px;
 	margin: 0;
 	position: absolute;
 	right: 0;
+	text-align: right;
 	z-index: 1;
 }
 
+.item .action::before {
+	content: '';
+	display: inline-block;
+	width: 200px;
+}
+
 .item .action .rate {
+	display: inline-block;
 	margin-right: 20px;
 }
 
