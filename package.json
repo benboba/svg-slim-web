@@ -10,7 +10,7 @@
     "dev": "rm -rf dist && cross-env NODE_ENV=production webpack --progress -w"
   },
   "dependencies": {
-    "svg-slim": "^2.0.1"
+    "svg-slim": "^2.0.2"
   },
   "devDependencies": {
     "cross-env": "^7.0.2",
