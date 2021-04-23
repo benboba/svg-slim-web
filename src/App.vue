@@ -2,7 +2,6 @@
 	<div id="app">
 		<nav id="nav">
 			<a href="https://github.com/benboba/svg-slim" target="_blank">GITHUB</a>
-			<a href="https://gitee.com/kumaria/svg-slim" target="_blank">GITEE</a>
 			<a href="https://npmjs.com/package/svg-slim" target="_blank">NPM</a>
 		</nav>
 		<h1 id="logo">SVG Slim</h1>
