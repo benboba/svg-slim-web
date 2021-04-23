@@ -1,6 +1,5 @@
 {
   "name": "svg-slim-web",
-  "sideEffects": false,
   "version": "1.0.0",
   "main": "index.html",
   "repository": "git@github.com:benboba/svg-slim-web.git",

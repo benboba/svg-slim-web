@@ -1,5 +1,9 @@
 <template>
 	<div id="side" :class="visible ? '' : 'hidden'">
+		<span class="fixer">
+			<a href="#side"><i class="el-icon-setting"/></a>
+			<a href="#list"><i class="el-icon-top"/></a>
+		</span>
 		<h1 @mouseenter="hover(true)" @mouseleave="hover(false)" @click="toggle"><i :class="isHover ? visible ? 'el-icon-caret-right' : 'el-icon-caret-left' : 'el-icon-setting'"/>Optimize settings</h1>
 		<config/>
 	</div>
@@ -42,6 +46,7 @@ export default Vue.extend({
 	top: 10vh;
 	transition: right .7s;
 	width: 400px;
+	z-index: 2;
 }
 
 #side.hidden {
@@ -71,5 +76,55 @@ export default Vue.extend({
 
 #side h1 i {
 	margin-right: 15px;
+}
+
+#side .fixer {
+	bottom: 5vh;
+	display: none;
+	position: fixed;
+	right: 2vw;
+	z-index: 2;
+}
+
+#side .fixer a {
+	background-color: #f06966;
+	border-radius: 50%;
+	color: #fff;
+	display: block;
+	margin-top: 10px;
+	padding: 10px;
+	text-align: center;
+	text-decoration: none;
+}
+
+#side .fixer a:hover {
+	background-color: #f1ac9d;
+}
+
+#side .fixer i {
+	display: block;
+	font-size: 30px;
+}
+
+@media screen and (max-width: 768px) {
+	#side {
+		margin-top: 5vmin;
+		position: static;
+		width: auto;
+	}
+
+	#side >>> #config {
+		margin-left: 0!important;
+		width: auto;
+	}
+
+	#side h1 {
+		border-radius: 0;
+		pointer-events: none;
+	}
+
+	#side .fixer {
+		display: block;
+	}
 }
 </style>

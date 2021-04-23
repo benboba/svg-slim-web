@@ -5,7 +5,7 @@
 			<el-button type="primary" :disabled="!inputText.trim()" @click="submitText">Submit</el-button>
 		</div>
 		<section class="upload">
-			<span class="tips"><i class="el-icon-upload"/>Click to upload, or drag and drop files to the page</span>
+			<div class="tips"><i class="el-icon-upload"/>Click to upload, or drag and drop files to the page</div>
 			<form ref="uploadForm"><input type="file" accept="image/svg+xml" @change="upload" multiple/></form>
 		</section>
 		<section class="item" v-for="(item, key) in list" :key="key">
@@ -212,45 +212,46 @@ export default Vue.extend({
 .upload {
 	background: #dee2d180;
 	border-radius: 20px;
-	height: 20vh;
 	overflow: hidden;
 	position: relative;
 	transition: height .7s;
 }
 
-.upload:last-child {
-	height: 50vh;
-}
-
 .upload .tips {
 	color: #9a9;
-	font-size: 2vh;
+	font-size: 2vmin;
+	padding: 5vmin;
 	pointer-events: none;
-	position: absolute;
 	text-align: center;
-	transition: font-size .7s;
-	width: 100%;
+	transition: all .7s;
 }
 
 .upload:last-child .tips {
-	font-size: 4vh;
+	font-size: 4vmin;
+	padding: 7vmin 5vmin;
 }
 
 .upload .tips i {
 	display: block;
-	font-size: 10vh;
-	margin: 2vh auto;
+	font-size: 20vmin;
+	margin: 0 auto 2vmin;
 	transition: all .7s;
 }
 
 .upload:last-child .tips i {
-	font-size: 30vh;
-	margin: 5vh auto 3vh;
+	font-size: 30vmin;
+}
+
+.upload form {
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
 }
 
 .upload input {
 	cursor: pointer;
-	font-size: 100vw;
+	font-size: 100vmin;
 	opacity: 0;
 	position: absolute;
 	right: 0;
@@ -377,5 +378,16 @@ export default Vue.extend({
 
 .input .el-button {
 	border-radius: 0 5px 5px 0;
+}
+
+@media screen and (max-width: 768px) {
+	#list,
+	#list.noside {
+		padding-right: 20px;
+	}
+
+	.history {
+		display: none;
+	}
 }
 </style>

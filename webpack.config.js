@@ -4,9 +4,6 @@ const VueLoaderPlugin = require('vue-loader/lib/plugin');
 
 module.exports = {
 	mode: 'production',
-	optimization: {
-		usedExports: true,
-	},
 	entry: './src/app.ts',
 	node: {
 		fs: "empty",
