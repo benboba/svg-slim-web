@@ -326,14 +326,6 @@ export default Vue.extend({
 	color: #6abe83;
 }
 
-.input {
-	margin-bottom: 3vh;
-}
-
-.input .el-button.is-disabled {
-	opacity: .3;
-}
-
 .history h5 {
 	color: #fff;
 	font-size: 1em;
@@ -367,6 +359,7 @@ export default Vue.extend({
 	border-radius: 5px;
 	box-shadow: 2px 2px 5px rgba(0,0,0,.2);
 	display: flex;
+	margin-bottom: 3vh;
 }
 
 .input .el-textarea >>> textarea {
@@ -380,6 +373,10 @@ export default Vue.extend({
 	border-radius: 0 5px 5px 0;
 }
 
+.input .el-button.is-disabled {
+	opacity: .3;
+}
+
 @media screen and (max-width: 768px) {
 	#list,
 	#list.noside {
@@ -388,6 +385,14 @@ export default Vue.extend({
 
 	.history {
 		display: none;
+	}
+
+	.input {
+		flex-direction: column;
+	}
+
+	.input .el-button {
+		border-radius: 0 0 5px 5px;
 	}
 }
 </style>
