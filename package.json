@@ -15,7 +15,7 @@
   "devDependencies": {
     "cross-env": "^7.0.2",
     "css-loader": "^5.0.0",
-    "element-ui": "^2.14.0",
+    "element-ui": "^2.15.6",
     "es-dev-server": "^1.57.8",
     "file-loader": "^6.2.0",
     "mini-css-extract-plugin": "^1.2.1",
@@ -26,6 +26,7 @@
     "ts-loader": "^8.0.7",
     "typescript": "^4.0.5",
     "vue": "^2.6.12",
+    "vue-i18n": "^8.26.7",
     "vue-loader": "^15.9.5",
     "vue-template-compiler": "^2.6.12",
     "vuex": "^3.5.1",
